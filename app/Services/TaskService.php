@@ -14,7 +14,7 @@ class TaskService
         if (request()->has('due_date')) {
             $tasks->whereDate('due_date', request()->input('due_date'));
         }
-
+        // filter by status if provided
         if (request()->has('status')) {
             $tasks->where('status', request()->input('status'));
         }
