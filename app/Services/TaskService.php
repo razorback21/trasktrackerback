@@ -28,7 +28,9 @@ class TaskService
             return Task::create($data);
         } catch (\Exception $e) {
             // Handle exception or log error
-            Log::info('Task creation failed: '.$e->getMessage());
+            Log::error('Task creation failed: '.$e->getMessage());
+
+            throw $e;
         }
     }
 
@@ -40,7 +42,9 @@ class TaskService
             return $task;
 
         } catch (\Exception $e) {
-            Log::info('Task update failed: '.$e->getMessage());
+            Log::error('Task update failed: '.$e->getMessage());
+
+            throw $e;
         }
     }
 }
