@@ -11,7 +11,7 @@ class TaskRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -23,6 +23,10 @@ class TaskRequest extends FormRequest
     {
         return [
             'title' => 'required|string',
+            'user_id' => 'required|exists:users,id',
+            'description' => 'nullable|string',
+            'due_date' => 'nullable|date',
+            'status' => 'nullable|string|in:new,in_progress,completed',
         ];
     }
 }
