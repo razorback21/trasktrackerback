@@ -32,7 +32,7 @@ class TaskController extends Controller
      */
     public function update(TaskRequest $request, Task $task, TaskService $taskService)
     {
-        $taskService->updateTask($task, $request->input());
+        $taskService->updateTask($task, $request->input()); //
     }
 
     /**

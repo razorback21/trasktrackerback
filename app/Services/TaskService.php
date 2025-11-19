@@ -38,6 +38,7 @@ class TaskService
             $task->update($data);
 
             return $task;
+
         } catch (\Exception $e) {
             Log::info('Task update failed: '.$e->getMessage());
         }
