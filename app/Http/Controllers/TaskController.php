@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\TaskRequest;
 use App\Http\Resources\TaskResource;
 use App\Models\Task;
-use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
@@ -13,22 +13,20 @@ class TaskController extends Controller
      */
     public function index()
     {
-        $tasks = Task::query();
+        $tasks = Task::query()->with('user');
         if (request()->has('due_date')) {
             $tasks->whereDate('due_date', request()->input('due_date'));
         }
 
-        // $response = TaskResource::collection($tasks->paginate(2)->withQueryString());
-
-        return TaskResource::collection($tasks->get());
+        return TaskResource::collection($tasks->paginate(10)->withQueryString());
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(TaskRequest $request)
     {
-        //
+        Task::create($request->input());
     }
 
     /**
@@ -42,9 +40,9 @@ class TaskController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Task $task)
+    public function update(TaskRequest $request, Task $task)
     {
-        //
+        $task->update($request->input());
     }
 
     /**
@@ -52,6 +50,6 @@ class TaskController extends Controller
      */
     public function destroy(Task $task)
     {
-        //
+        $task->delete();
     }
 }
