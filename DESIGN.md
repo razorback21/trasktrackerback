@@ -14,7 +14,7 @@
 4. Apply dynamic imports to load code on demand and improve performance.
 
 5. Use debouncing for input events when needed to reduce unnecessary calls.
-   Reduce re‑rendering by using useRef instead of useState for storing transient values (ex. form inputs).
+   Reduce re-rendering by using useRef instead of useState for storing transient values (ex. form inputs).
 
 6. Apply useCallback and useMemo to optimize component rendering and prevent unnecessary recalculations.
 
@@ -43,6 +43,6 @@ Laravel has a built‑in queueing feature. All we need to do is run php `artisan
 
 #### 3. How would you optimize database queries and caching?
 
-There are several effective ways to optimize database queries. I can create indexes on frequently used columns to speed up searches. When selecting fields, I avoid using \* since it fetches all columns, instead, I specify only the fields I need. Applying LIMIT also improves performance by reducing the amount of data returned. For data that doesn’t require real‑time updates, I use materialized views and query directly from it and When I worked with Eloquent, I always make sure to eager load relationships to prevent N+1 query issues.
+There are several effective ways to optimize database queries. I can create indexes on frequently used columns to speed up searches. When selecting fields, I avoid using \* since it fetches all columns, instead, I specify only the fields I need. Applying LIMIT also improves performance by reducing the amount of data returned. For data that doesn't require realtime updates, I use materialized views and query directly from it and When I worked with Eloquent, I always make sure to eager load relationships to prevent N+1 query issues.
 
-For cache optimization, it’s important to choose the right storage engine. I recommend Redis because it’s fast, reliable, and well‑suited for handling large amounts of cached data. Setting proper expiration times and invalidating cache intelligently also help maintain performance and consistency.
+For cache optimization, it's important to choose the right storage engine. I recommend Redis because it's fast, reliable, and wellsuited for handling large amounts of cached data. Setting proper expiration times and invalidating cache intelligently also help maintain performance and consistency.
