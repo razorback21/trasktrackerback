@@ -23,8 +23,8 @@ which could lead to SQL injection attacks.
 
 ```
 To Improve the security of the code. Code validation must be implemented to validate the request inputs.
-In Laravel we can access the validate method in the request object and configure the validation rules or we can create a custom
-FormRequest class to handle the validation.
+In Laravel we can access the validate method in the request object and configure the validation rules or
+we can create a custom FormRequest class to handle the validation.
 ```
 
 # B. React Snippet
@@ -52,7 +52,7 @@ Questions:
 
 ```
 The first issue is in handleSubmit. There is no e.preventDefault(). Without it the code
- will submit the form and reload the whole page. The second issue is performance related by using useState.
+will submit the form and reload the whole page. The second issue is performance related by using useState.
 ```
 
 2.  Suggest improvements.
