@@ -1,9 +1,11 @@
 # Intruction
 
-1. Rename .env.example to .env
-2. set to APP_URL=http://localhost:8000
-3. Fenerate APP_KEY - `php artisan key:generate`
-4. Create a new database file inside the database folder name it database.sqlite
-5. run the application - `php artisan serve`
-6. Run migration - `php artisan migrate`
-7. Seed database - `php artisan dbLseed`
+1. Run `composer install`
+2. Run `npm install`
+3. Rename `.env.example` to `.env`
+4. set APP_URL=http://localhost:8000
+5. Generate APP_KEY - `php artisan key:generate`
+6. Create a new database file inside the database folder name it `database.sqlite`
+7. Run migration - `php artisan migrate`
+8. Seed database - `php artisan db:seed`
+9. run the application - `php artisan serve` or `composer run dev`
