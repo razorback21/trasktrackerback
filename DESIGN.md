@@ -1,7 +1,7 @@
 # Part 3 — System Design
 
 1. How would you scale this app for 100k+ users?
-   I can scale this app to 100k+ users by optimizing both the front‑end and back‑end code.
+   I can scale this app to 100k+ users by optimizing both the frontend and backend code and services.
 
 ### For frontend (React and javascript)
 
