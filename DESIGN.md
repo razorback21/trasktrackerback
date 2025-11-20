@@ -18,7 +18,7 @@
 
 6. Apply useCallback and useMemo to optimize component rendering and prevent unnecessary recalculations.
 
-### Back‑end - Assuming I am using AWS platform
+### Back‑end - Assuming I'm using AWS platform
 
 1. I will host the app on AWS with two application Ec2 servers behind a load balancer for high availability.
 
