@@ -26,7 +26,7 @@ class TaskRequest extends FormRequest
             'user_id' => 'required|exists:users,id',
             'description' => 'nullable|string',
             'due_date' => 'nullable|date',
-            'status' => 'nullable|string|in:new,in_progress,completed',
+            'status' => 'nullable|string|in:new,on_progress,completed',
         ];
     }
 }
