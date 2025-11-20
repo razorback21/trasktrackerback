@@ -25,7 +25,8 @@ which could lead to SQL injection attacks.
 To improve the security of the code. Code validation must be implemented to validate the request inputs.
 In Laravel we can access the validate method in the request object and configure the validation rules or
 we can create a custom FormRequest class to handle the validation. For maintainability, adding try catch
-block and logging errors and moving it into a service class for cleaner controller action.
+block and logging errors and moving it into a service class for cleaner controller action and a documentation
+about what the function does the return type and parameters.
 ```
 
 # B. React Snippet
