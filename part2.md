@@ -29,7 +29,7 @@ block and logging errors and moving it into a service class for cleaner controll
 about what the function does the return type and parameters.
 ```
 
-# B. React Snippet
+### B. React Snippet
 
 ```javascript
 function AddTask() {
