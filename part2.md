@@ -51,14 +51,16 @@ Questions:
 1.  Identify at least two issues in this code.
 
 ```
-The first issue is in handleSubmit. There is no e.preventDefault(). Without it the code
-will submit the form and reload the whole page. The second issue is performance related by using useState.
+The first issue is in handleSubmit. There is no e.preventDefault(). Without it the code will submit
+the form and reload the whole page. The second issue is performance related by using useState.
+The third is onChange handler inline function.
 ```
 
 2.  Suggest improvements.
 
 ```
-A. Instead of useState we can replace it with useRef instead so we don't have to trigger
+A. Add e.preventDefault() to handleSubmit to prevent page from reloading.
+B. Instead of useState we can replace it with useRef instead so we don't have to trigger
    rerendering every time the state changes when onChange event fires.
-B. Add e.preventDefault() to handleSubmit to prevent page from reloading.
+C. Refactor onChange handler to a resusable function
 ```
