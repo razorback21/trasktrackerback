@@ -22,7 +22,7 @@ which could lead to SQL injection attacks.
 2.  How would you improve it for security and maintainability?
 
 ```
-To Improve the security of the code. Code validation must be implemented to validate the request inputs.
+To improve the security of the code. Code validation must be implemented to validate the request inputs.
 In Laravel we can access the validate method in the request object and configure the validation rules or
 we can create a custom FormRequest class to handle the validation.
 ```
@@ -58,7 +58,7 @@ will submit the form and reload the whole page. The second issue is performance 
 2.  Suggest improvements.
 
 ```
-A. Instead of useState we can replace it with useRef instead so we don’t have to trigger
+A. Instead of useState we can replace it with useRef instead so we don't have to trigger
    rerendering every time the state changes when onChange event fires.
-B. Add e.preventDefault() to handleSubmit to prevent page from reloading
+B. Add e.preventDefault() to handleSubmit to prevent page from reloading.
 ```
