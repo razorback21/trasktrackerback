@@ -28,10 +28,10 @@
 
 4. Implement rate limiting in (WAF) to protect the app from abuse and excessive requests.
 
-5. Optimize queries in Laravel, for example by eager loading relationships to avoid N+1 issues.
-   Use Laravel middleware for rate limiting at the application level.
+5. Optimize queries in Laravel, for example by eager loading relationships to avoid N+1 issues and
+   use Laravel middleware for rate limiting at the application level.
 
-6. If I were to update this app in the future maybe adding feature notifications, uploading of images and processing it. I will leverage Laarvel builtin queued jobs feature to process task on the background.
+6. If I were to update this app in the future maybe adding feature like notifications, uploading of images and processing it. I will leverage Laarvel builtin queued jobs feature to process task on the background.
 
 7. I will make sure to move all data processing logic to the database, not on the application level. I have fixed a lot of these issues with legacy applications and it really affects the performance big time. I notice some developers just use PHP arrays to structure large datasets.
 
