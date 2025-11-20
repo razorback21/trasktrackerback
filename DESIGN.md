@@ -33,6 +33,8 @@
 
 6. If I were to update this app in the future maybe adding feature notifications, uploading of images and processing it. I will leverage Laarvel builtin queued jobs feature to process task on the background.
 
+7. I will make sure to move all data processing logic to the database, not on the application level. I have fixed a lot of these issues with legacy applications and it really affects the performance big time. I notice some developers just use PHP arrays to structure large datasets.
+
 #### 2. How would you implement background jobs (e.g., reminders)?
 
 Laravel has a built‑in queueing feature. All we need to do is run php `artisan make:job MyJob`, and this will create a queueable class that implements ShouldQueue and uses the Queueable trait. We can then place our logic inside this job, and somewhere in our code we dispatch it to the queue worker for background processing. Laravel also provides helper classes that use Queueable, such as notifications, which can likewise be processed asynchronously in the background.
