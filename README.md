@@ -9,3 +9,10 @@
 7. Run migration - `php artisan migrate`
 8. Seed database - `php artisan db:seed`
 9. run the application - `php artisan serve` or `composer run dev`
+
+# API Filter
+
+1. Filter by due_date:
+   `ex. http://localhost:8000/api/tasks?due_date=2025-12-20`
+2. Filter by status:
+   `http://localhost:8000/api/tasks?status=completed`
