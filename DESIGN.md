@@ -18,9 +18,9 @@
 
 6. Apply useCallback and useMemo to optimize component rendering and prevent unnecessary recalculations.
 
-### Back‑end - Assuming I am using AWS to host the app
+### Back‑end - Assuming I am using AWS platform
 
-1. Host the app on AWS with two application servers behind a load balancer for high availability.
+1. I will host the app on AWS with two application Ec2 servers behind a load balancer for high availability.
 
 2. Use Amazon RDS with a master‑slave setup: route all read requests to the slave database, while the master handles write, update, delete, read operations. Incase slave is down, master database can also handle read operation.
 
@@ -30,6 +30,8 @@
 
 5. Optimize queries in Laravel, for example by eager loading relationships to avoid N+1 issues.
    Use Laravel middleware for rate limiting at the application level.
+
+6. If I were to update this app in the future maybe adding feature notifications, uploading of images and processing it. I will leverage Laarvel builtin queued jobs feature to process task on the background.
 
 #### 2. How would you implement background jobs (e.g., reminders)?
 
